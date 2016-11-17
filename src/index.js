@@ -10,7 +10,6 @@ var pc = {};
 app.get('/volumes', (req, res) => {
 	let volumes = {};
 	pc.hdd.forEach(hdd => {
-		console.log(hdd.size);
 		const currSize = volumes[hdd.volume] || 0;
 		volumes[hdd.volume] = currSize + hdd.size;
 	});
